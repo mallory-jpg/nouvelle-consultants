@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nouvelle Consulting Partners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:       #f2efe8;
+  --cream-mid:   #eae6dc;
+  --cream-dark:  #dedad0;
+  --navy:        #1a3244;
+  --navy-2:      #22404f;
+  --navy-dark:   #111f2b;
+  --gold:        #c4a97d;
+  --gold-light:  #d6be9a;
+  --ink:         #1a2b35;
+  --muted:       #6b7b85;
+  --border:      #dddad3;
+  --white:       #ffffff;
+  --display:     'Cinzel', serif;
+  --serif:       'Cormorant Garamond', Georgia, serif;
+  --sans:        'Jost', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── UTILITIES ── */
+.overline {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+}
+
+.serif-h {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--navy);
+}
+
+.btn-navy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--sans);
+  font-size: 0.73rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background: var(--navy);
+  padding: 0.88rem 2rem;
+  transition: background 0.22s;
+}
+.btn-navy:hover { background: var(--navy-2); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--sans);
+  font-size: 0.73rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+  padding: 0.88rem 2rem;
+  transition: background 0.22s, color 0.22s;
+}
+.btn-outline:hover { background: var(--navy); color: var(--white); }
+
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--navy);
+  transition: gap 0.2s;
+}
+.btn-text:hover { gap: 0.7rem; }
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 300;
+  background: rgba(242,239,232,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4.5rem;
+  height: 66px;
+}
+
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--navy);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--navy); }
+
+.nav-cta {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background: var(--navy);
+  padding: 0.58rem 1.5rem;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--navy-2); }
+
+/* ── HERO ── */
+.hero {
+  padding-top: 66px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-left {
+  padding: 5.5rem 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--border);
+}
+
+.hero-overline { margin-bottom: 1.6rem; }
+
+.hero-h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 4.2vw, 4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--navy);
+  margin-bottom: 1.8rem;
+}
+.hero-h1 em { font-style: italic; }
+
+.hero-sub {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 410px;
+  margin-bottom: 2.8rem;
+}
+
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 4rem;
+  padding-top: 2.2rem;
+  border-top: 1px solid var(--border);
+}
+.stat-num {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--navy);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.stat-label {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.hero-right {
+  background: var(--navy-dark);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem;
+  min-height: 560px;
+}
+.hero-right-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(150deg, #234559 0%, #1a3244 45%, #0f1e2b 100%);
+}
+.hero-right-pattern {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.04;
+  pointer-events: none;
+}
+.hero-right-pattern span {
+  font-family: var(--display);
+  font-size: 9rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  color: var(--gold-light);
+  text-align: center;
+  line-height: 1.3;
+}
+.hero-quote-card {
+  position: relative;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(196,169,125,0.22);
+  padding: 1.6rem 2rem;
+  max-width: 300px;
+}
+.hero-quote-label {
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.65rem;
+}
+.hero-quote-text {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.6;
+}
+
+/* ── TICKER ── */
+.ticker {
+  background: var(--navy);
+  overflow: hidden;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  animation: tickrun 32s linear infinite;
+}
+.ticker-track span {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  padding: 0 2rem;
+}
+.ticker-track span.dot { color: var(--gold); font-size: 0.45rem; padding: 0 0.5rem; }
+@keyframes tickrun { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── INTRO ── */
+.intro {
+  padding: 5.5rem 4.5rem;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 6rem;
+  align-items: center;
+}
+.intro-title {
+  font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+}
+.intro-body {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.95;
+}
+.intro-body p + p { margin-top: 1rem; }
+
+/* ── WHO WE SERVE ── */
+.serve {
+  padding: 6rem 4.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.serve-head {
+  margin-bottom: 2.5rem;
+}
+.serve-section-title {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin-top: 0.5rem;
+}
+
+.serve-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.serve-card {
+  position: relative;
+  border-radius: 7px;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  cursor: pointer;
+}
+
+.serve-card-bg {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.55s ease;
+}
+.serve-card:hover .serve-card-bg { transform: scale(1.05); }
+
+/* Unique tints per card — replicating the dark teal-navy overlay from screenshot */
+.sc1 .serve-card-bg { background: linear-gradient(145deg, #1f4d62 0%, #1a3a4e 50%, #132a38 100%); }
+.sc2 .serve-card-bg { background: linear-gradient(145deg, #1c4458 0%, #183649 50%, #102633 100%); }
+.sc3 .serve-card-bg { background: linear-gradient(145deg, #1a4155 0%, #163345 50%, #0e2330 100%); }
+.sc4 .serve-card-bg { background: linear-gradient(145deg, #1e4a5e 0%, #1b3c4f 50%, #132c3b 100%); }
+.sc5 .serve-card-bg { background: linear-gradient(145deg, #173a4d 0%, #132d3e 50%, #0c1f2b 100%); }
+.sc6 .serve-card-bg { background: linear-gradient(145deg, #1d4759 0%, #193848 50%, #112832 100%); }
+
+.serve-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,22,32,0.28);
+}
+
+.serve-card-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+.serve-card-label span {
+  font-family: var(--display);
+  font-size: clamp(0.78rem, 1.3vw, 1.05rem);
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: var(--gold-light);
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+/* ── SERVICES ── */
+.services {
+  padding: 6rem 4.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.services-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+}
+.services-section-title {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  max-width: 400px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border);
+}
+.svc-item {
+  padding: 2.2rem 2.4rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: background 0.25s;
+}
+.svc-item:nth-child(3n) { border-right: none; }
+.svc-item:nth-last-child(-n+3) { border-bottom: none; }
+.svc-item:hover { background: rgba(26,50,68,0.04); }
+
+.svc-num {
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.svc-name {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 0.7rem;
+}
+.svc-desc {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.85;
+  flex: 1;
+  margin-bottom: 1.4rem;
+}
+.svc-link {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: gap 0.2s;
+}
+.svc-item:hover .svc-link { gap: 0.65rem; }
+
+/* ── APPROACH ── */
+.approach {
+  padding: 6rem 4.5rem;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.approach-img {
+  aspect-ratio: 4/5;
+  background: var(--navy-dark);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.approach-img-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(155deg, #234c62 0%, #1a3244 60%, #0f1e2b 100%);
+}
+.approach-img > span {
+  position: relative;
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(196,169,125,0.35);
+  letter-spacing: 0.08em;
+}
+.approach-badge {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  background: var(--cream);
+  padding: 1.2rem 1.6rem;
+}
+.approach-badge-num {
+  font-family: var(--serif);
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--navy);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.approach-badge-label {
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.approach-overline { margin-bottom: 0.6rem; }
+.approach-title {
+  font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+  margin-bottom: 1.4rem;
+}
+.approach-body {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 0.5rem;
+}
+.approach-steps { margin-top: 2rem; }
+.approach-step {
+  display: flex;
+  gap: 1.3rem;
+  padding: 1.3rem 0;
+  border-top: 1px solid var(--border);
+  align-items: flex-start;
+}
+.step-num {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gold);
+  flex-shrink: 0;
+  width: 26px;
+  line-height: 1.5;
+}
+.step-title {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.2rem;
+}
+.step-desc {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* ── BLOG ── */
+.blog {
+  padding: 6rem 4.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.blog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+.blog-section-title { font-size: clamp(1.9rem, 2.8vw, 2.6rem); margin-top: 0.5rem; }
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border);
+}
+.blog-card {
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s;
+}
+.blog-card:last-child { border-right: none; }
+.blog-card:hover { background: var(--cream-mid); }
+.blog-img {
+  aspect-ratio: 16/9;
+  background: var(--cream-dark);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog-img span {
+  font-family: var(--serif);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  font-style: italic;
+}
+.blog-body { padding: 1.8rem; flex: 1; display: flex; flex-direction: column; }
+.blog-tag {
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+.blog-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+.blog-excerpt {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+  flex: 1;
+  margin-bottom: 1.2rem;
+}
+.blog-read {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ── TESTIMONIALS ── */
+.testimonials {
+  padding: 6rem 4.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--navy-dark);
+}
+.testi-head { margin-bottom: 3.5rem; }
+.testi-overline { color: var(--gold); }
+.testi-section-title {
+  font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+  color: var(--white);
+  margin-top: 0.5rem;
+}
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.testi-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(196,169,125,0.14);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.testi-mark {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 0.9;
+  margin-bottom: 1rem;
+}
+.testi-text {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.75;
+  flex: 1;
+  margin-bottom: 1.8rem;
+}
+.testi-person { display: flex; align-items: center; gap: 0.9rem; }
+.testi-avatar {
+  width: 37px; height: 37px;
+  border-radius: 50%;
+  background: rgba(196,169,125,0.12);
+  border: 1px solid rgba(196,169,125,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--gold-light);
+  flex-shrink: 0;
+  font-family: var(--sans);
+}
+.testi-name { font-size: 0.8rem; font-weight: 500; color: var(--white); display: block; }
+.testi-role { font-size: 0.7rem; color: rgba(255,255,255,0.38); }
+
+/* ── CTA BAND ── */
+.cta-band {
+  padding: 5.5rem 4.5rem;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.cta-band-overline { margin-bottom: 0.6rem; }
+.cta-band-title { font-size: clamp(2rem, 3vw, 2.8rem); margin-bottom: 1.2rem; }
+.cta-band-body {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 2.2rem;
+}
+.cta-panel {
+  background: var(--cream-dark);
+  border: 1px solid var(--border);
+  padding: 2.6rem;
+}
+.cta-panel-title {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.45;
+  margin-bottom: 1.6rem;
+}
+.check-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.check-list li {
+  font-size: 0.83rem;
+  font-weight: 300;
+  color: var(--muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  line-height: 1.5;
+}
+.check-list li::before {
+  content: '';
+  display: inline-block;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: rgba(26,50,68,0.07);
+  border: 1px solid rgba(26,50,68,0.18);
+  flex-shrink: 0;
+  margin-top: 1px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5l2.5 2.5L8 3' stroke='%231a3244' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+}
+
+/* ── FAQ ── */
+.faq {
+  padding: 6rem 4.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.faq-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 6rem;
+  align-items: start;
+}
+.faq-left-title { font-size: clamp(1.9rem, 2.8vw, 2.6rem); margin-top: 0.5rem; margin-bottom: 1.2rem; }
+.faq-left-body {
+  font-size: 0.86rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 2rem;
+}
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:first-child { border-top: 1px solid var(--border); }
+.faq-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--sans);
+}
+.faq-q { font-size: 0.9rem; font-weight: 500; color: var(--navy); }
+.faq-icon {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--muted);
+  flex-shrink: 0;
+  margin-left: 1rem;
+  transition: transform 0.25s, background 0.2s, border-color 0.2s;
+  font-family: var(--sans);
+  line-height: 1;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); background: var(--navy); color: var(--white); border-color: var(--navy); }
+.faq-a {
+  font-size: 0.84rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.85;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.32s ease, padding 0.25s;
+}
+.faq-item.open .faq-a { max-height: 200px; padding-bottom: 1.3rem; }
+
+/* ── SPLIT CTA ── */
+.split-cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.split-block {
+  padding: 5rem 4.5rem;
+  border-right: 1px solid var(--border);
+}
+.split-block:last-child { border-right: none; background: var(--navy); }
+.split-block-overline { margin-bottom: 1.4rem; }
+.split-block:last-child .split-block-overline { color: rgba(255,255,255,0.35); }
+.split-block-title {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-weight: 400;
+  line-height: 1.18;
+  margin-bottom: 1rem;
+  color: var(--navy);
+}
+.split-block:last-child .split-block-title { color: var(--white); }
+.split-block-body {
+  font-size: 0.86rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 340px;
+  margin-bottom: 2.2rem;
+}
+.split-block:last-child .split-block-body { color: rgba(255,255,255,0.48); }
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--sans);
+  font-size: 0.73rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--navy);
+  background: var(--white);
+  padding: 0.88rem 2rem;
+  transition: background 0.2s;
+}
+.btn-white:hover { background: var(--cream); }
+
+/* ── FOOTER ── */
+footer {
+  background: #0f1d28;
+  padding: 5rem 4.5rem 2.5rem;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: 2rem;
+}
+.footer-logo {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.85rem;
+}
+.footer-desc {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.36);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+}
+.footer-form { display: flex; }
+.footer-email {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-right: none;
+  padding: 0.7rem 1rem;
+  font-family: var(--sans);
+  font-size: 0.73rem;
+  color: var(--white);
+  outline: none;
+}
+.footer-email::placeholder { color: rgba(255,255,255,0.22); }
+.footer-submit {
+  background: var(--gold);
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0f1d28;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.footer-submit:hover { background: var(--gold-light); }
+.footer-col-head {
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  margin-bottom: 1.4rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.62rem; }
+.footer-col a {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.48);
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--white); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-copy { font-size: 0.68rem; color: rgba(255,255,255,0.2); }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.22);
+  transition: color 0.2s;
+}
+.footer-legal a:hover { color: rgba(255,255,255,0.55); }
+
+/* ── ENTRANCE ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-overline { animation: fadeUp 0.5s ease 0.1s both; }
+.hero-h1       { animation: fadeUp 0.6s ease 0.22s both; }
+.hero-sub      { animation: fadeUp 0.6s ease 0.36s both; }
+.hero-actions  { animation: fadeUp 0.6s ease 0.48s both; }
+.hero-stats    { animation: fadeUp 0.6s ease 0.6s both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Nouvelle Consulting Partners</a>
+  <ul class="nav-links">
+    <li><a href="#serve">Who We Serve</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#approach">Our Approach</a></li>
+    <li><a href="#blog">Insights</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get started</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="overline hero-overline">Nouvelle Consulting Partners</span>
+    <h1 class="hero-h1">
+      Partners in modernizing<br>
+      <em>traditional service<br>businesses.</em>
+    </h1>
+    <p class="hero-sub">
+      We work alongside established service companies to build the systems, strategies, and capabilities they need to grow — without losing what made them successful in the first place.
+    </p>
+    <div class="hero-actions">
+      <a href="#serve" class="btn-navy">Who we serve ↗</a>
+      <a href="#services" class="btn-outline">Our services</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">6</span>
+        <span class="stat-label">Industries served</span>
+      </div>
+      <div>
+        <span class="stat-num">9+</span>
+        <span class="stat-label">Years experience</span>
+      </div>
+      <div>
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Execution focused</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-right-bg"></div>
+    <div class="hero-right-pattern"><span>NCP</span></div>
+    <div class="hero-quote-card">
+      <span class="hero-quote-label">Our belief</span>
+      <span class="hero-quote-text">Traditional industries deserve modern partnerships — not generic consulting.</span>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span>Contracting</span><span class="dot">·</span>
+    <span>Real Estate</span><span class="dot">·</span>
+    <span>Healthcare and Home Health</span><span class="dot">·</span>
+    <span>HVAC</span><span class="dot">·</span>
+    <span>Transportation and Logistics</span><span class="dot">·</span>
+    <span>Higher Education</span><span class="dot">·</span>
+    <span>Operations Design</span><span class="dot">·</span>
+    <span>Workforce Planning</span><span class="dot">·</span>
+    <span>Technology Adoption</span><span class="dot">·</span>
+    <span>Growth Strategy</span><span class="dot">·</span>
+    <span>Contracting</span><span class="dot">·</span>
+    <span>Real Estate</span><span class="dot">·</span>
+    <span>Healthcare and Home Health</span><span class="dot">·</span>
+    <span>HVAC</span><span class="dot">·</span>
+    <span>Transportation and Logistics</span><span class="dot">·</span>
+    <span>Higher Education</span><span class="dot">·</span>
+    <span>Operations Design</span><span class="dot">·</span>
+    <span>Workforce Planning</span><span class="dot">·</span>
+    <span>Technology Adoption</span><span class="dot">·</span>
+    <span>Growth Strategy</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro">
+  <h2 class="serif-h intro-title">
+    Built-in expertise.<br>
+    Not handed-off deliverables.
+  </h2>
+  <div class="intro-body">
+    <p>Traditional service businesses have the relationships, the reputation, and the know-how. What they often lack is the infrastructure, strategy, and operational clarity to grow without chaos. That is where Nouvelle comes in.</p>
+    <p>We embed alongside your team — understanding your business from the inside out — and build the frameworks, systems, and strategies that translate your expertise into scalable, sustainable growth.</p>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="serve" id="serve">
+  <div class="serve-head">
+    <span class="overline">Industries</span>
+    <h2 class="serif-h serve-section-title">Who We Serve</h2>
+  </div>
+
+  <div class="serve-grid">
+    <div class="serve-card sc1">
+      <div class="serve-card-bg"></div>
+      <div class="serve-card-overlay"></div>
+      <div class="serve-card-label"><span>Contracting</span></div>
+    </div>
+    <div class="serve-card sc2">
+      <div class="serve-card-bg"></div>
+      <div class="serve-card-overlay"></div>
+      <div class="serve-card-label"><span>Real Estate</span></div>
+    </div>
+    <div class="serve-card sc3">
+      <div class="serve-card-bg"></div>
+      <div class="serve-card-overlay"></div>
+      <div class="serve-card-label"><span>Healthcare<br>&amp; Home Health</span></div>
+    </div>
+    <div class="serve-card sc4">
+      <div class="serve-card-bg"></div>
+      <div class="serve-card-overlay"></div>
+      <div class="serve-card-label"><span>HVAC</span></div>
+    </div>
+    <div class="serve-card sc5">
+      <div class="serve-card-bg"></div>
+      <div class="serve-card-overlay"></div>
+      <div class="serve-card-label"><span>Transportation<br>&amp; Logistics</span></div>
+    </div>
+    <div class="serve-card sc6">
+      <div class="serve-card-bg"></div>
+      <div class="serve-card-overlay"></div>
+      <div class="serve-card-label"><span>Higher<br>Education</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-top">
+    <div>
+      <span class="overline" style="margin-bottom:0.5rem;">What we do</span>
+      <h2 class="serif-h services-section-title">Scalable solutions<br>for your growth</h2>
+    </div>
+    <a href="#contact" class="btn-outline">Start a project ↗</a>
+  </div>
+
+  <div class="services-grid">
+    <div class="svc-item">
+      <span class="svc-num">01</span>
+      <div class="svc-name">Operations Design</div>
+      <p class="svc-desc">Streamlining workflows and internal structures to support rapid scaling — without disrupting the service quality your clients depend on.</p>
+      <span class="svc-link">Make it happen →</span>
+    </div>
+    <div class="svc-item">
+      <span class="svc-num">02</span>
+      <div class="svc-name">Growth Strategy</div>
+      <p class="svc-desc">Market analysis, competitive positioning, and revenue frameworks designed for service businesses that are ready to grow — not just survive.</p>
+      <span class="svc-link">Make it happen →</span>
+    </div>
+    <div class="svc-item">
+      <span class="svc-num">03</span>
+      <div class="svc-name">Technology Adoption</div>
+      <p class="svc-desc">Identifying and implementing the right tools — including AI-enabled solutions — to modernize your operations without breaking what already works.</p>
+      <span class="svc-link">Make it happen →</span>
+    </div>
+    <div class="svc-item">
+      <span class="svc-num">04</span>
+      <div class="svc-name">Workforce Planning</div>
+      <p class="svc-desc">Staffing structures, contractor models, and team design that give your business the flexibility to grow, hire right, and retain the people who matter most.</p>
+      <span class="svc-link">Make it happen →</span>
+    </div>
+    <div class="svc-item">
+      <span class="svc-num">05</span>
+      <div class="svc-name">Business Development</div>
+      <p class="svc-desc">Positioning, partnership strategy, and pitch development to help traditional service businesses compete — and win — in increasingly sophisticated markets.</p>
+      <span class="svc-link">Make it happen →</span>
+    </div>
+    <div class="svc-item">
+      <span class="svc-num">06</span>
+      <div class="svc-name">Financial and Entity Structuring</div>
+      <p class="svc-desc">Advisory support on business planning, entity formation, and financial frameworks — so your growth has the right legal and operational foundation underneath it.</p>
+      <span class="svc-link">Make it happen →</span>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach" id="approach">
+  <div class="approach-img">
+    <div class="approach-img-bg"></div>
+    <span>[ Image placeholder ]</span>
+    <div class="approach-badge">
+      <span class="approach-badge-num">Embedded</span>
+      <span class="approach-badge-label">Not just advisory</span>
+    </div>
+  </div>
+  <div>
+    <span class="overline approach-overline">How we work</span>
+    <h2 class="serif-h approach-title">A true partner,<br>not a vendor.</h2>
+    <p class="approach-body">Most consultants hand you a report and leave. We stay long enough to see our recommendations become results. Our process is built around your business — not a templated framework recycled from the last engagement.</p>
+    <div class="approach-steps">
+      <div class="approach-step">
+        <span class="step-num">01</span>
+        <div>
+          <div class="step-title">Discover</div>
+          <p class="step-desc">We go deep into your operations, team, customers, and market before making a single recommendation.</p>
+        </div>
+      </div>
+      <div class="approach-step">
+        <span class="step-num">02</span>
+        <div>
+          <div class="step-title">Design</div>
+          <p class="step-desc">We build strategies and systems tailored to your business — not recycled from the last engagement.</p>
+        </div>
+      </div>
+      <div class="approach-step">
+        <span class="step-num">03</span>
+        <div>
+          <div class="step-title">Execute</div>
+          <p class="step-desc">We work alongside your team to implement, adjust, and drive outcomes — not observe from the outside.</p>
+        </div>
+      </div>
+      <div class="approach-step">
+        <span class="step-num">04</span>
+        <div>
+          <div class="step-title">Scale</div>
+          <p class="step-desc">We build the infrastructure so your growth compounds — and you are not dependent on us to maintain it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog" id="blog">
+  <div class="blog-head">
+    <div>
+      <span class="overline" style="margin-bottom:0.5rem;">Insights</span>
+      <h2 class="serif-h blog-section-title">Perspectives from<br>the field</h2>
+    </div>
+    <a href="#" class="btn-outline">All articles ↗</a>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <div class="blog-img"><span>[ Article image ]</span></div>
+      <div class="blog-body">
+        <span class="blog-tag">Operations</span>
+        <div class="blog-title">Why Traditional Service Businesses Stall at Growth Stage</div>
+        <p class="blog-excerpt">The systems that got you to your first million in revenue are rarely the ones that get you to ten. Here is what needs to change — and when.</p>
+        <span class="blog-read">Read more →</span>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-img"><span>[ Article image ]</span></div>
+      <div class="blog-body">
+        <span class="blog-tag">Technology</span>
+        <div class="blog-title">AI in the Trades: What is Actually Worth Implementing Right Now</div>
+        <p class="blog-excerpt">Not every AI tool is built for a contracting or HVAC business. A practical guide to what moves the needle and what is just noise.</p>
+        <span class="blog-read">Read more →</span>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-img"><span>[ Article image ]</span></div>
+      <div class="blog-body">
+        <span class="blog-tag">Workforce</span>
+        <div class="blog-title">The Staffing Structures That Actually Support Scaling in Service Firms</div>
+        <p class="blog-excerpt">Contractor vs employee, W-2 vs 1099, in-house vs outsourced. The decisions that shape your ability to grow — and the ones most owners get wrong.</p>
+        <span class="blog-read">Read more →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testi-head">
+    <span class="overline testi-overline">Client voices</span>
+    <h2 class="serif-h testi-section-title">What our clients say</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-mark">&ldquo;</div>
+      <p class="testi-text">Nouvelle did not just give us a strategy deck. They worked inside our business long enough to understand what was actually getting in the way of our growth. The difference was real.</p>
+      <div class="testi-person">
+        <div class="testi-avatar">MR</div>
+        <div>
+          <span class="testi-name">Marcus R.</span>
+          <span class="testi-role">Owner, Regional Contracting Firm</span>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-mark">&ldquo;</div>
+      <p class="testi-text">We had been operating the same way for twelve years. Nouvelle helped us see what we could not — and built the plan to change it without losing what made us successful in the first place.</p>
+      <div class="testi-person">
+        <div class="testi-avatar">DT</div>
+        <div>
+          <span class="testi-name">Diane T.</span>
+          <span class="testi-role">Founder, Home Health Agency</span>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-mark">&ldquo;</div>
+      <p class="testi-text">Their approach is refreshingly direct. No fluff, no filler. Just clear thinking, sharp recommendations, and a team that actually follows through. That is rare in this space.</p>
+      <div class="testi-person">
+        <div class="testi-avatar">JW</div>
+        <div>
+          <span class="testi-name">Jerome W.</span>
+          <span class="testi-role">VP Operations, Logistics Company</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div>
+    <span class="overline cta-band-overline">Ready to build together?</span>
+    <h2 class="serif-h cta-band-title">Let us help you become more sustainable and profitable.</h2>
+    <p class="cta-band-body">We have already done it with dozens of startups and service businesses. If you are ready to move forward, we are ready to get to work.</p>
+    <a href="#contact" class="btn-navy">Join our ecosystem ↗</a>
+  </div>
+  <div class="cta-panel">
+    <p class="cta-panel-title">What you can expect from every engagement:</p>
+    <ul class="check-list">
+      <li>Deep discovery before any recommendations are made</li>
+      <li>Strategies built for your business, not a template</li>
+      <li>Embedded execution support, not just deliverables</li>
+      <li>Clear ownership and accountability across your team</li>
+      <li>Deliverables that are presentation-ready from day one</li>
+      <li>A relationship built to last beyond the project</li>
+    </ul>
+    <a href="#contact" class="btn-text">Schedule a discovery call →</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div>
+      <span class="overline" style="margin-bottom:0.6rem;">Common questions</span>
+      <h2 class="serif-h faq-left-title">Still have questions?</h2>
+      <p class="faq-left-body">Take a look at the FAQ or reach out directly anytime. If you are feeling ready, go ahead and apply — we are a short conversation away.</p>
+      <a href="#contact" class="btn-navy">Register ↗</a>
+    </div>
+    <div>
+      <div class="faq-item open">
+        <button class="faq-btn">
+          <span class="faq-q">What types of businesses does Nouvelle Consulting work with?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">We work with traditional service-based businesses across contracting, real estate, healthcare and home health, HVAC, transportation and logistics, and higher education. If your business has deep roots in a service industry and is ready to modernize, we are built for you.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">How do I get started?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Getting started is simple. Reach out through our contact form or book a discovery call. We will walk through your business, identify where we can add the most value, and propose an engagement structure that fits your goals and timeline.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">What makes Nouvelle different from other consultants?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">We embed — we do not just advise. We believe in understanding your business from the inside before making a single recommendation, and we stay through execution rather than handing off a report and leaving. Our work is specific, actionable, and close to final from the first draft.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">How long does a typical engagement last?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Engagements vary by scope. Project-based work can range from a few weeks to a few months. Ongoing advisory retainers are also available for businesses that want continued strategic support as they grow. We will recommend the right structure after our discovery conversation.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">What is your pricing model?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">We offer flexible pricing based on project type, scope, and complexity. After an initial discovery conversation, we provide a transparent proposal with clear deliverables, timelines, and investment — no hidden costs and no billing by the hour.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT CTA -->
+<div class="split-cta" id="contact">
+  <div class="split-block">
+    <span class="overline split-block-overline">Careers</span>
+    <h3 class="split-block-title">Join a team of dedicated professionals.</h3>
+    <p class="split-block-body">We are always looking for sharp, execution-minded people who want to do meaningful work alongside service businesses that are building something real.</p>
+    <a href="#" class="btn-navy">Join our team ↗</a>
+  </div>
+  <div class="split-block">
+    <span class="split-block-overline">New project</span>
+    <h3 class="split-block-title">Let's get started on your project.</h3>
+    <p class="split-block-body">Let us help you become more sustainable and profitable, as we have already done with dozens of our clients. Ready when you are.</p>
+    <a href="mailto:hello@nouvelleconsulting.com" class="btn-white">Let's get started ↗</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">Nouvelle Consulting Partners</div>
+      <p class="footer-desc">Partners in modernizing traditional service-based businesses. Sharp thinking. Clear execution. Real results.</p>
+      <div class="footer-form">
+        <input type="email" class="footer-email" placeholder="Email address">
+        <button class="footer-submit">Sign up</button>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-head">Who we are</div>
+      <ul>
+        <li><a href="#approach">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#serve">Industries</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-head">Contact us</div>
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#contact">Book a call</a></li>
+        <li><a href="mailto:hello@nouvelleconsulting.com">Email us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-head">Resources</div>
+      <ul>
+        <li><a href="#blog">Insights</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#">Case studies</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">Nouvelle Consulting Partners &copy; 2026</span>
+    <div class="footer-legal">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
