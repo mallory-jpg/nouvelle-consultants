@@ -965,90 +965,22 @@ nav {
 /* ── FOOTER ── */
 footer {
   background: #0f1d28;
-  padding: 5rem 4.5rem 2.5rem;
+  padding: 2.5rem 4.5rem;
 }
-.footer-top {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: 4rem;
-  padding-bottom: 4rem;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  margin-bottom: 2rem;
-}
-.footer-logo {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: var(--white);
-  margin-bottom: 0.85rem;
-}
-.footer-desc {
-  font-size: 0.78rem;
-  font-weight: 300;
-  color: rgba(255,255,255,0.36);
-  line-height: 1.85;
-  margin-bottom: 2rem;
-}
-.footer-form { display: flex; }
-.footer-email {
-  flex: 1;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-right: none;
-  padding: 0.7rem 1rem;
-  font-family: var(--sans);
-  font-size: 0.73rem;
-  color: var(--white);
-  outline: none;
-}
-.footer-email::placeholder { color: rgba(255,255,255,0.22); }
-.footer-submit {
-  background: var(--gold);
-  border: none;
-  padding: 0.7rem 1.2rem;
-  font-family: var(--sans);
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #0f1d28;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.footer-submit:hover { background: var(--gold-light); }
-.footer-col-head {
-  font-size: 0.58rem;
-  font-weight: 500;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.28);
-  margin-bottom: 1.4rem;
-}
-.footer-col ul { list-style: none; }
-.footer-col li { margin-bottom: 0.62rem; }
-.footer-col a {
-  font-size: 0.8rem;
-  font-weight: 300;
-  color: rgba(255,255,255,0.48);
-  transition: color 0.2s;
-}
-.footer-col a:hover { color: var(--white); }
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .footer-copy { font-size: 0.68rem; color: rgba(255,255,255,0.2); }
-.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal { display: flex; gap: 2rem; }
 .footer-legal a {
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.22);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.45);
   transition: color 0.2s;
 }
-.footer-legal a:hover { color: rgba(255,255,255,0.55); }
+.footer-legal a:hover { color: var(--white); }
 
 /* ── ENTRANCE ── */
 @keyframes fadeUp {
@@ -1467,46 +1399,13 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-top">
-    <div>
-      <div class="footer-logo">Nouvelle Consulting Partners</div>
-      <p class="footer-desc">Partners in modernizing traditional service-based businesses. Sharp thinking. Clear execution. Real results.</p>
-      <div class="footer-form">
-        <input type="email" class="footer-email" placeholder="Email address">
-        <button class="footer-submit">Sign up</button>
-      </div>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-head">Who we are</div>
-      <ul>
-        <li><a href="#approach">About</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#serve">Industries</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-head">Contact us</div>
-      <ul>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#contact">Book a call</a></li>
-        <li><a href="mailto:hello@nouvelleconsulting.com">Email us</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-head">Resources</div>
-      <ul>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#">Case studies</a></li>
-        <li><a href="#">Terms</a></li>
-      </ul>
-    </div>
-  </div>
   <div class="footer-bottom">
     <span class="footer-copy">Nouvelle Consulting Partners &copy; 2026</span>
     <div class="footer-legal">
-      <a href="#">Privacy</a>
+      <a href="#approach">About</a>
+      <a href="#services">Services</a>
+      <a href="#serve">Industries</a>
+      <a href="mailto:mckinley@nouvelleconsultants.com">Email us</a>
       <a href="#">Terms</a>
     </div>
   </div>
